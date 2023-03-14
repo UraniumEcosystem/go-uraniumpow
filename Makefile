@@ -11,7 +11,8 @@ GORUN = env GO111MODULE=on go run
 geth:
 	$(GORUN) build/ci.go install ./cmd/geth
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/geth\" to launch geth."
+	@echo "Run \"$(GOBIN)/guraniumpow\" to launch geth."
+	mv $(GOBIN)/geth $(GOBIN)/guraniumpow
 
 all:
 	$(GORUN) build/ci.go install
